@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
+  <title>{{title}}</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div id="container">
+  <div class="section header grid-container grid-parent">
+    <div class="split picture-container grid-40">
+      <picture class="picture">
+        <img src="{{avatar}}" alt="avatar"/>
+      </picture>
+    </div>
+    <div class="split grid-60">
+      <div class="names">
+        <h1 class="name"><span class="no-wrap">{{name}}</span></h1>
+      </div>
+      {{label_groups}}
+    </div>
+  </div>
+
+  <div class="section intro">
+    <h2><i aria-hidden="true" class="fa fa-chevron-right"></i>About</h2>
+    <div class="block grid-container grid-parent">
+      <div class="split grid-50 mobile-grid-100">
+        {{about_content}}
+      </div>
+
+      <div class="split grid-50 mobile-grid-100">
+        <figure class="identities">
+          <figcaption><i class="fas fa-external-link-alt"></i> links</figcaption>
+          <ul>
+            {{links}}
+          </ul>
+        </figure>
+
+        <figure class="identities">
+          <figcaption><i class="fas fa-external-link-alt"></i> open-source projects</figcaption>
+          <ul>
+            {{projects}}
+          </ul>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="section intro">
+    <h2><i aria-hidden="true" class="fa fa-chevron-right"></i>Games</h2>
+    <div class="block grid-container grid-parent">
+      <div class="split grid-50 mobile-grid-100">
+        {{games_content}}
+      </div>
+      <div class="split grid-50 mobile-grid-100">
+        <figure class="identities">
+          <figcaption><i class="fas fa-external-link-alt"></i> profiles</figcaption>
+          <ul>
+            {{profiles}}
+          </ul>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="section footer shadow">
+    <div class="copyright">
+      <i aria-hidden="true" class="fas fa-exclamation-triangle"></i> {{copyright}}
+    </div>
+  </div>
+</div>
+</body>
+</html>

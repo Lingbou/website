@@ -1,0 +1,62 @@
+{
+  "title": "Lingbou的主页",
+  "name": "Xingqiu Xu (Lingbou)",
+  "avatar": "assets/avatar.jpg",
+  "groups": [
+    {
+      "name": "Identity",
+      "items": [
+        { "icon": "fas fa-code", "label": "Fullstack Engineer" },
+        { "icon": "fab fa-github", "label": "Open Source Contributor" },
+        { "icon": "fas fa-trophy", "label": "ACMer" }
+      ]
+    },
+    {
+      "name": "Matrix",
+      "items": [
+        { "icon": "fas fa-robot", "label": "AI Agent Runtime" },
+        { "icon": "fas fa-cloud", "label": "Cloud Native" },
+        { "icon": "fab fa-linux", "label": "Linux" },
+        { "icon": "fas fa-server", "label": "Infra" }
+      ]
+    },
+    {
+      "name": "Arsenal",
+      "items": [
+        { "icon": "fab fa-python", "label": "Python" },
+        { "icon": "fab fa-rust", "label": "Rust" },
+        { "icon": "fab fa-golang", "label": "Golang" },
+        { "icon": "fab fa-docker", "label": "Docker" },
+        { "icon": "fas fa-dharmachakra", "label": "Kubernetes" }
+      ]
+    },
+    {
+      "name": "Platforms",
+      "items": [
+        { "icon": "fab fa-fedora", "label": "Fedora" },
+        { "icon": "fab fa-debian", "label": "Debian" },
+        { "svg": "arch", "label": "Arch" },
+        { "icon": "fab fa-windows", "label": "Win 11" },
+        { "icon": "fab fa-linux", "label": "LOS", "title": "Lingbou OS (Self-built Linux Distribution)" },
+        { "icon": "fab fa-android", "label": "Android" }
+      ]
+    }
+  ],
+  "links": [
+    { "icon": "fab fa-github", "label": "GitHub", "value": "@Lingbou", "url": "https://github.com/Lingbou" },
+    { "icon": "fas fa-mail-bulk", "label": "Mail", "value": "hilbertanjou83@gmail.com", "url": "mailto:hilbertanjou83@gmail.com" },
+    { "icon": "fas fa-blog", "label": "个人博客", "value": "blog.lingbou.com", "url": "https://blog.lingbou.com" },
+    { "icon": "far fa-caret-square-right", "label": "Bilibili", "value": "白棂_", "url": "https://space.bilibili.com/1893575190" }
+  ],
+  "projects": [
+    { "icon": "fab fa-github", "label": "rk8s", "value": "Rust 容器编排 & CRI 运行时", "url": "https://github.com/rk8s-dev/rk8s" },
+    { "icon": "fab fa-github", "label": "Ikaros", "value": "自主 AI Agent 运行时引擎", "url": "https://github.com/Lingbou/Ikaros" },
+    { "icon": "fab fa-github", "label": "Line", "value": "Rust TUI SSH 连接管理器", "url": "https://github.com/Lingbou/Line" },
+    { "icon": "fab fa-github", "label": "Lios", "value": "基于 ModelScope 的加密网盘", "url": "https://github.com/Lingbou/Lios" },
+    { "icon": "fab fa-github", "label": "awen", "value": "跨平台 Agent 客户端 & 守护进程", "url": "https://github.com/AllenReder/awen" }
+  ],
+  "profiles": [
+    { "icon": "fab fa-steam", "label": "Steam", "value": "Lingbou", "url": "https://steamcommunity.com/profiles/76561199521980514" }
+  ],
+  "copyright": "Copyright © 2025-2026 秋葉杏 && Lingbou."
+}
