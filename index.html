@@ -5,7 +5,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
   <title>Lingbou的主页</title>
-  <link href="style.css" rel="stylesheet">
+  <link href="style.css?v=20261001-3" rel="stylesheet">
 </head>
 <body>
 <div id="container">
@@ -78,21 +78,25 @@
 
         <p style="border-left:3px solid #828486">关于人设</p>
 
-        <p>我が名はめぐみん、红魔族随一の魔法の使い手にして、爆裂魔法を操りし者、我が力、见るが良い！Explosion!</p>
-
-        <p>比黑色更黑，比黑暗更暗的漆黑<br/>
-        在此寄托吾真红的金光吧<br/>
-        觉醒之时的到来 荒谬教会的堕落章理<br/>
-        化作无形的扭曲<br/>
-        显现吧！<br/>
-        起舞吧 起舞吧 起舞吧<br/>
-        吾之力量本源之愿的崩坏<br/>
-        无人可及的崩坏<br/>
-        将天地万象焚烧殆尽<br/>
-        自深渊降临吧！<br/>
-        这就是人类最大威力的攻击手段<br/>
-        这就是 究极的攻击魔法！<br/>
-        Explosion!</p>
+        <details class="incantation">
+  <summary>我が名はめぐみん、红魔族随一の魔法の使い手にして、爆裂魔法を操りし者、我が力、见るが良い！Explosion!</summary>
+  <audio class="incantation-audio" preload="none" src="assets/explosion.mp3" aria-hidden="true"></audio>
+  <div class="incantation-body">
+    比黑色更黑，比黑暗更暗的漆黑<br/>
+    在此寄托吾真红的金光吧<br/>
+    觉醒之时的到来 荒谬教会的堕落章理<br/>
+    化作无形的扭曲<br/>
+    显现吧！<br/>
+    起舞吧 起舞吧 起舞吧<br/>
+    吾之力量本源之愿的崩坏<br/>
+    无人可及的崩坏<br/>
+    将天地万象焚烧殆尽<br/>
+    自深渊降临吧！<br/>
+    这就是人类最大威力的攻击手段<br/>
+    这就是 究极的攻击魔法！<br/>
+    <strong class="incantation-finish">Explosion!</strong>
+  </div>
+</details>
 
         <p style="border-left:3px solid #828486">希望生活能够温柔一点</p>
       </div>
@@ -151,5 +155,30 @@
     </div>
   </div>
 </div>
+  <script>
+    (() => {
+      const details = document.querySelector('.incantation');
+      const audio = details?.querySelector('.incantation-audio');
+      if (!details || !audio) return;
+
+      const syncAudio = () => {
+        if (details.open) {
+          if (audio.ended || (Number.isFinite(audio.duration) && audio.currentTime >= audio.duration - 0.05)) {
+            audio.currentTime = 0;
+          }
+          const playback = audio.play();
+          if (playback) playback.catch(() => {});
+        } else {
+          audio.pause();
+        }
+      };
+
+      details.addEventListener('toggle', syncAudio);
+      details.querySelector('summary')?.addEventListener('click', () => requestAnimationFrame(syncAudio));
+      audio.addEventListener('play', () => {
+        if (!details.open) audio.pause();
+      });
+    })();
+  </script>
 </body>
 </html>

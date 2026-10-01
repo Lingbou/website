@@ -13,7 +13,7 @@ function parseMarkdown(mdText) {
   const htmlParts = [];
 
   for (const block of blocks) {
-    if (block.startsWith('<img') || block.startsWith('<div')) {
+    if (block.startsWith('<img') || block.startsWith('<div') || block.startsWith('<details')) {
       htmlParts.push(block);
       continue;
     }

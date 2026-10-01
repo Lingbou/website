@@ -15,20 +15,24 @@
 
 ### 关于人设
 
-我が名はめぐみん、红魔族随一の魔法の使い手にして、爆裂魔法を操りし者、我が力、见るが良い！Explosion!
-
-比黑色更黑，比黑暗更暗的漆黑
-在此寄托吾真红的金光吧
-觉醒之时的到来 荒谬教会的堕落章理
-化作无形的扭曲
-显现吧！
-起舞吧 起舞吧 起舞吧
-吾之力量本源之愿的崩坏
-无人可及的崩坏
-将天地万象焚烧殆尽
-自深渊降临吧！
-这就是人类最大威力的攻击手段
-这就是 究极的攻击魔法！
-Explosion!
+<details class="incantation">
+  <summary>我が名はめぐみん、红魔族随一の魔法の使い手にして、爆裂魔法を操りし者、我が力、见るが良い！Explosion!</summary>
+  <audio class="incantation-audio" preload="none" src="assets/explosion.mp3" aria-hidden="true"></audio>
+  <div class="incantation-body">
+    比黑色更黑，比黑暗更暗的漆黑<br/>
+    在此寄托吾真红的金光吧<br/>
+    觉醒之时的到来 荒谬教会的堕落章理<br/>
+    化作无形的扭曲<br/>
+    显现吧！<br/>
+    起舞吧 起舞吧 起舞吧<br/>
+    吾之力量本源之愿的崩坏<br/>
+    无人可及的崩坏<br/>
+    将天地万象焚烧殆尽<br/>
+    自深渊降临吧！<br/>
+    这就是人类最大威力的攻击手段<br/>
+    这就是 究极的攻击魔法！<br/>
+    <strong class="incantation-finish">Explosion!</strong>
+  </div>
+</details>
 
 ### 希望生活能够温柔一点

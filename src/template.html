@@ -5,7 +5,7 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"/>
   <title>{{title}}</title>
-  <link href="style.css" rel="stylesheet">
+  <link href="style.css?v=20261001-3" rel="stylesheet">
 </head>
 <body>
 <div id="container">
@@ -71,5 +71,30 @@
     </div>
   </div>
 </div>
+  <script>
+    (() => {
+      const details = document.querySelector('.incantation');
+      const audio = details?.querySelector('.incantation-audio');
+      if (!details || !audio) return;
+
+      const syncAudio = () => {
+        if (details.open) {
+          if (audio.ended || (Number.isFinite(audio.duration) && audio.currentTime >= audio.duration - 0.05)) {
+            audio.currentTime = 0;
+          }
+          const playback = audio.play();
+          if (playback) playback.catch(() => {});
+        } else {
+          audio.pause();
+        }
+      };
+
+      details.addEventListener('toggle', syncAudio);
+      details.querySelector('summary')?.addEventListener('click', () => requestAnimationFrame(syncAudio));
+      audio.addEventListener('play', () => {
+        if (!details.open) audio.pause();
+      });
+    })();
+  </script>
 </body>
 </html>
